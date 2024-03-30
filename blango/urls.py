@@ -30,6 +30,7 @@ urlpatterns = [
     path("ip/", blog.views.get_ip),
     # Account
     path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("allauth.urls")),
     path("accounts/profile/", blango_auth.views.profile, name="profile"),
     # Registration
     path(
